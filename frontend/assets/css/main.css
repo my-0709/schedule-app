@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+    Meiryo, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* ========== Material Symbols ========== */
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: -0.2em;
+  user-select: none;
+}
+
+/* ========== FullCalendar モダンテーマ ========== */
+.fc {
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+/* ボタン */
+.fc-button-primary {
+  background: #6366f1 !important;
+  border-color: #4f46e5 !important;
+  border-radius: 8px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  padding: 0.35rem 0.875rem !important;
+  box-shadow: none !important;
+  transition: all 0.15s !important;
+}
+.fc-button-primary:hover:not(:disabled) {
+  background: #4f46e5 !important;
+  border-color: #4338ca !important;
+}
+.fc-button-primary:not(:disabled).fc-button-active,
+.fc-button-primary:not(:disabled):active {
+  background: #4338ca !important;
+  border-color: #3730a3 !important;
+}
+.fc-button-group .fc-button { border-radius: 0 !important; }
+.fc-button-group .fc-button:first-child {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+.fc-button-group .fc-button:last-child {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+/* ツールバー */
+.fc-toolbar-title {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+.fc .fc-toolbar {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  row-gap: 0.625rem;
+}
+
+/* ヘッダーセル */
+.fc-col-header-cell {
+  background: #f8fafc;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #64748b;
+  padding: 0.5rem 0 !important;
+}
+
+/* 今日 */
+.fc-day-today {
+  background: #eef2ff !important;
+}
+.fc-day-today .fc-daygrid-day-number {
+  background: #6366f1;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* クリック可能な日セル（dateClick用のカーソル） */
+.fc-day:not(.fc-day-disabled) {
+  cursor: pointer;
+}
+.fc-daygrid-day:hover .fc-daygrid-day-frame {
+  background: rgba(99, 102, 241, 0.04);
+}
+
+/* イベント — colorはeventDidMountで強制適用するのでここでは指定しない */
+.fc-event {
+  border-radius: 5px !important;
+  padding: 1px 5px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: opacity 0.15s, transform 0.15s !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14) !important;
+  border-width: 0 !important;
+  color: #fff !important;
+}
+.fc-event:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+/* イベントテキスト */
+.fc-event-main,
+.fc-event-title {
+  color: #fff !important;
+}
+/* ドットは非表示 */
+.fc-daygrid-event-dot { display: none !important; }
+
+/* タイムグリッド */
+.fc-timegrid-slot { height: 2.25rem !important; }
+.fc-timegrid-axis { font-size: 0.75rem !important; }
+
+/* リスト */
+.fc-list-event:hover td { background: #f1f5f9 !important; }
+
+/* ========== スマホ対応 ========== */
+@media (max-width: 640px) {
+  /* ツールバー：センタータイトルを上に */
+  .fc .fc-toolbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  .fc .fc-toolbar-chunk:nth-child(2) {
+    text-align: center;
+  }
+  .fc-toolbar-title {
+    font-size: 0.9rem !important;
+  }
+
+  /* ボタンを小さく */
+  .fc-button-primary {
+    font-size: 0.72rem !important;
+    padding: 0.28rem 0.55rem !important;
+  }
+
+  /* カラムヘッダを小さく */
+  .fc-col-header-cell {
+    font-size: 0.68rem !important;
+    padding: 0.3rem 0 !important;
+  }
+  .fc-col-header-cell-cushion {
+    padding: 3px 2px !important;
+  }
+
+  /* タイムラベルを狭く */
+  .fc-timegrid-axis {
+    width: 38px !important;
+    min-width: 38px !important;
+    font-size: 0.65rem !important;
+  }
+  .fc-timegrid-axis-cushion,
+  .fc-timegrid-slot-label-cushion {
+    font-size: 0.65rem !important;
+    padding: 0 2px !important;
+  }
+
+  /* タイムグリッドスロット */
+  .fc-timegrid-slot { height: 1.75rem !important; }
+
+  /* 月ビューの日番号 */
+  .fc-daygrid-day-number {
+    font-size: 0.72rem !important;
+    padding: 2px 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .fc-toolbar-title { font-size: 0.8rem !important; }
+  .fc-button-primary {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.45rem !important;
+  }
+}

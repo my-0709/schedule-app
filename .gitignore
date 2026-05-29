@@ -1,0 +1,29 @@
+# ===== API (Laravel) =====
+api/.env
+api/.env.*
+!api/.env.example
+api/vendor/
+api/node_modules/
+api/storage/logs/*
+api/storage/framework/cache/*
+api/storage/framework/sessions/*
+api/storage/framework/views/*
+api/storage/app/public/avatars/*
+api/bootstrap/cache/*.php
+api/.phpunit.cache/
+
+# ===== Frontend (Nuxt 3) =====
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+frontend/node_modules/
+frontend/.nuxt/
+frontend/.output/
+frontend/dist/
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
