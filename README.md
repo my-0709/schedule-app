@@ -3,10 +3,32 @@
 
 個人のスケジュールを管理するWebアプリケーションです。カレンダー表示・ドラッグ＆ドロップ操作・カラーテーマなど、直感的に使える機能を備えています。
 
-※本アプリはClaude Codeを通して製造・デプロイをしました。
+※本アプリはClaude Codeを活用しながら設計・実装・デバッグ・デプロイまで実施しました。
 
 ---
 
+## アプリ画面
+
+<img width="1080" height="1861" alt="IMG_20260603_161237_807" src="https://github.com/user-attachments/assets/f38f74e7-d60c-43f8-9597-6ee333a3014a" />
+
+<img width="1080" height="1923" alt="IMG_20260603_161254_823" src="https://github.com/user-attachments/assets/03c4eecb-ee6d-4d20-87c5-590be05bfca6" />
+
+
+<img width="1080" height="1958" alt="IMG_20260603_161313_350" src="https://github.com/user-attachments/assets/880717fb-2862-4c1f-b769-93a25117890c" />
+
+・本番環境URL
+
+https://frontend-my-0709s-projects.vercel.app/
+
+
+・デモユーザー
+
+ID:demo@example.com
+
+PW:password
+
+
+---
 ## 目次
 
 - [概要](#概要)
